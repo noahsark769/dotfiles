@@ -1,0 +1,65 @@
+# general
+config defaultToCurrentScreen true
+config nudgePercentOf screenSize
+config resizePercentOf screenSize
+
+# Relaunch
+bind space:ctrl;alt;cmd relaunch
+
+# Position Aliases
+alias full move screenOriginX;screenOriginY screenSizeX;screenSizeY
+alias lefthalf move screenOriginX;screenOriginY screenSizeX/2;screenSizeY
+alias righthalf move screenOriginX+screenSizeX/2;screenOriginY screenSizeX/2;screenSizeY
+alias tophalf move screenOriginX;screenOriginY screenSizeX;screenSizeY/2
+alias bottomhalf move screenOriginX;screenOriginY+screenSizeY/2 screenSizeX;screenSizeY/2
+alias xcode move screenOriginX+50;screenOriginY screenSizeX-100;screenSizeY-125
+
+# 3 monitor layouts
+layout 3monitor 'Finder':REPEAT ${tophalf} 2
+layout 3monitor 'Google Chrome':REPEAT ${full} 0
+layout 3monitor 'Adium':REPEAT move screenOriginX+100;screenOriginY+50 screenSizeX*3/4;screenSizeY-50 1
+layout 3monitor 'Sublime Text 2':REPEAT ${full} 1
+layout 3monitor 'Xcode':REPEAT ${xcode} 1
+layout 3monitor 'iTerm':REPEAT ${bottomhalf} 2
+layout 3monitor 'Simulator':REPEAT ${tophalf} 2
+
+# 1 monitor layouts
+layout 1monitor 'Finder':REPEAT ${full} 0
+layout 1monitor 'Google Chrome':REPEAT ${full} 0
+layout 1monitor 'iTerm':REPEAT ${full} 0
+layout 1monitor 'Adium':REPEAT ${full} 0
+layout 1monitor 'Sublime Text 2':REPEAT ${full} 0
+layout 1monitor 'Xcode':REPEAT ${full} 0
+layout 1monitor 'Simulator':REPEAT ${lefthalf} 0
+
+default 1monitor count:1
+default 3monitor count:3
+
+# Layout bindings
+bind 1:ctrl;alt;cmd    layout 1monitor
+bind 3:ctrl;alt;cmd    layout 3monitor
+
+
+# Move/Resize
+bind up:ctrl;alt;cmd    move 0;0 screenSizeX;screenSizeY
+
+# Throw Bindings
+bind right:ctrl;alt;cmd throw right
+bind left:ctrl;alt;cmd  throw left
+
+# Focus Bindings
+bind right:cmd;alt    focus right
+bind left:cmd;alt     focus left
+bind up:cmd;alt       focus up
+bind down:cmd;alt     focus down
+
+# Application bindings
+bind x:cmd;alt focus 'Xcode'
+bind f:cmd;alt focus 'Finder'
+bind g:cmd;alt focus 'Google Chrome'
+bind t:cmd;alt focus 'iTerm'
+bind s:cmd;alt focus 'Simulator'
+bind a:cmd;alt focus 'Adium'
+
+# Window Hints
+bind esc:cmd hint
