@@ -36,61 +36,52 @@ alias up="cd .."
 alias jj="clear"
 
 ### shortcuts for git
-alias push="git push origin"
-alias pull="git pull origin"
-alias fetch="git fetch"
-alias add="git add"
-alias commit="git commit"
-alias merge="git merge"
-alias status="git status"
+alias editprof="vim ~/.bash_profile"
+alias sourceprof="source ~/.bash_profile"
+alias co="git-fuzzy-co"
+alias c="git branch --sort=committerdate | tail -n 10"
+alias b="git branch"
+alias bd="git branch -D"
+alias setupstreammaster="git branch --set-upstream-to=origin/master"
+alias gg="git grep -n"
+alias gs="git status"
+alias stash="git stash"
+alias gaa="git add -A"
+alias gcm="git commit -m"
+alias com="git checkout master"
+alias gd="git diff"
+alias gl="git log"
+alias gpo="git push origin"
+alias grc="git rebase --continue"
+alias gprom="git pull --rebase origin master"
+alias gp="git pull"
+alias gls="git ls-files"
+alias server="python -m SimpleHTTPServer"
+
+function copysha {
+  git log -n 1
+  sha=$(git log --pretty=format:'%H' -n 1)
+  echo $sha | pbcopy
+  echo "Copied $sha"
+}
+
+function cb {
+  branch=$(git rev-parse --abbrev-ref HEAD)
+  echo $branch
+  echo $branch | tr -d '\n' | tr -d ' ' | pbcopy
+}
+
+function blameline {
+  cmd="git log -u -L $2,$2:$1"
+  echo $cmd
+  $cmd
+}
 
 ### shortcuts for vagrant
 alias v="vagrant" # got damn that word is hard to type
-
-### shortcuts for calband deployment
-alias calbandpush="python /Users/noah/Documents/programming/calband/calband-deploy/push.py"
-
-### edit this file really easily
-alias editprof="vim ~/.bash_profile"
-alias sourceprof="source ~/.bash_profile"
 
 ### don't trouble me with stupid shit, mysql
 alias mysql="mysql -u root -p"
 
 source ~/.bash_prompt
-
-### nice stuff for git and prompt
-source /usr/local/git/contrib/completion/git-completion.bash
-# GIT_PS1_SHOWDIRTYSTATE=true
-# export PS1='\h:\W$(__git_ps1) \u\$ '
-#if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
-#  c_reset=`tput sgr0`
-#  c_user=`tput setaf 5; tput bold`
-#  c_path=`tput setaf 4; tput bold`
-#  c_git_clean=`tput setaf 2`
-#  c_git_dirty=`tput setaf 1`
-#else
-#  c_reset=
-#  c_user=
-#  c_path=
-#  c_git_cleanclean=
-#  c_git_dirty=
-#fi
-#git_prompt ()
-#{
-#  if ! git rev-parse --git-dir > /dev/null 2>&1; then
-#    return 0
-#  fi
-#
-#  git_branch=$(git branch 2>/dev/null| sed -n '/^\*/s/^\* //p')
-#
-#  if git diff --quiet 2>/dev/null >&2; then
-#    git_color="${c_git_clean}"
-#  else
-#    git_color=${c_git_cleanit_dirty}
-#  fi
-#
-#  echo " [$git_color$git_branch${c_reset}]"
-#}
-#PS1='\h:\W \u\$ '
-#PS1='${c_user}\h${c_reset}:${c_path}\W${c_reset}$(git_prompt)\$ '
+source ~/git-completion.bash
