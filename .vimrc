@@ -201,11 +201,6 @@ set backspace=indent,eol,start
 "Manual folds, backed up and restored
 set foldmethod=manual
 
-
-"+++++++++++++++++++++
-"++ Yelp specific ++++
-"+++++++++++++++++++++
-
 let git_email = substitute(system('echo $GIT_COMMITTER_EMAIL'), '\n', '', '')
 if git_email == 'abrousse@yelp.com'
   "Hopefully ctags
