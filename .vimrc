@@ -172,9 +172,6 @@ set shiftwidth=2
 "MRU awesomeness
 let MRU_Max_Entries = 1000
 
-"Keep 100,000 lines of command line history. You cannot have enough.
-set history=100000
-
 "Save the Marks. All of them.
 set viminfo='1000,f1
 
