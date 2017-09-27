@@ -7,6 +7,7 @@ Turns `git checkout barnch` into `git checkout branch`,
 assuming `branch` is a branch.
 """
 
+from __future__ import print_function
 import difflib
 import sys
 
@@ -36,7 +37,7 @@ def fuzzy_checkout(branch):
         branches = sorted(branches, key=lambda b : proximity(branch, b))
         best = branches[-1]
         if proximity(best, branch) > 0.6:
-            print "Best match for '%s': '%s' (%.1f%%)" % (branch, best, 100*proximity(best, branch))
+            print("Best match for '{}': '{}' ({0:.2f})".format(branch, best, 100*proximity(best, branch)))
             try:
                 check_call(["git", "checkout", best])
             except CalledProcessError:
