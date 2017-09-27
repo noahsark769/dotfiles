@@ -172,9 +172,6 @@ set shiftwidth=2
 "MRU awesomeness
 let MRU_Max_Entries = 1000
 
-"Keep 100,000 lines of command line history. You cannot have enough.
-set history=100000
-
 "Save the Marks. All of them.
 set viminfo='1000,f1
 
@@ -203,11 +200,6 @@ set backspace=indent,eol,start
 
 "Manual folds, backed up and restored
 set foldmethod=manual
-
-
-"+++++++++++++++++++++
-"++ Yelp specific ++++
-"+++++++++++++++++++++
 
 let git_email = substitute(system('echo $GIT_COMMITTER_EMAIL'), '\n', '', '')
 if git_email == 'abrousse@yelp.com'
