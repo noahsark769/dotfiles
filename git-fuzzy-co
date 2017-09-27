@@ -46,7 +46,7 @@ def fuzzy_checkout(branch):
 
 if __name__ == '__main__':
     if len(sys.argv) <= 1:
-        print "\n".join(git_branches())
+        print("\n".join(git_branches()))
         sys.exit(0)
     sys.exit(fuzzy_checkout(sys.argv[1]))
 
