@@ -11,6 +11,9 @@ cd dotfiles
 mkdir -p ~/bin
 cp git-fuzzy-co ~/bin/
 cp .vimrc ~/.vimrc
+cp .bash_profile ~/.bash_profile
+cp .bash_prompt ~/.bash_prompt
+cp .slate ~/.slate
 # Install pathogen from the instructions at https://github.com/tpope/vim-pathogen
 mkdir -p ~/.vim/colors
 cp Monokai.vim ~/.vim/colors/
