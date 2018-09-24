@@ -8,6 +8,7 @@ For easy setup of new machines.
 git clone git@github.com:noahsark769/dotfiles.git
 cd dotfiles
 # Copy scripts into your path
+mkdir -p ~/bin
 cp git-fuzzy-co ~/bin/
 cp .vimrc ~/.vimrc
 # Install pathogen from the instructions at https://github.com/tpope/vim-pathogen
