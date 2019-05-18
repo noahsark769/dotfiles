@@ -5,6 +5,7 @@ For easy setup of new machines.
 
 ```
 # Clone the repo
+cd ~/ # ~ installation necessary for keyboard maestro scripts
 git clone git@github.com:noahsark769/dotfiles.git
 cd dotfiles
 # Copy scripts into your path
