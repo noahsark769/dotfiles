@@ -1,10 +1,39 @@
 function wrapLineLengths(inputString, limit) {
-    let lines = inputString.split("\r");
-    let prefix = sharedStart(lines);
+    let lines = inputString.replace(/(\r\n|\n|\r)/gm, "\n").split("\n");
+
+    let lastLine = "";
+    // for prefix calculation, we use only "lines with content" as defined by
+    // the following filter:
+    let prefix = sharedStart(lines.filter((line) => {
+        // filter out all lines which are complete subsets of the last line
+        if (lastLine.includes(line)) {
+            return false;
+        }
+        // filter out all empty lines
+        lastLine = line;
+        return line.trim().length > 0
+    }));
 
     let output = "";
     let currentLine = "";
     for (let line of lines) {
+        line = line.trimRight();
+        if (line.length === 0) {
+            if (currentLine.length > 0) {
+                output = output + currentLine + "\n";
+            }
+            output = output + line + "\n";
+            currentLine = "";
+            continue;
+        }
+
+        if (prefix.includes(line)) {
+            output = output + prefix + currentLine + "\n";
+            output = output + line + "\n";
+            currentLine = "";
+            continue;
+        }
+
         line = line.replace(prefix, "").trim();
         for (let word of line.split(" ")) {
             let newCurrentLine = prefix + currentLine + (currentLine.length > 0 ? " " : "") + word;
@@ -18,6 +47,9 @@ function wrapLineLengths(inputString, limit) {
     if (currentLine.length > 0) {
         output = output + prefix + currentLine + "\n";
     }
+    if (output[output.length - 1] === "\n") {
+        output = output.substring(0, output.length - 1);
+    } 
     return output;
 }
 
@@ -41,5 +73,6 @@ function run() {
 
 console.jxaRun = run;
 
-// this is somet this is more lines and I want hjkl hjlsfa jklsd ljfd sl sksdfa
-// jhkbsdfab ljkfsad blksda sfdjkl dfdbdb bdf dbd
+// something nothing
+//
+// other something
