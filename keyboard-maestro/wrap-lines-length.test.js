@@ -59,7 +59,35 @@ test("Comments with newlines which don't have a space after slashes", () => {
     assertClipboardInputMatchesRunOutput(input, output);
 });
 
-test("Comments which start with the same text after the slashes", () => {});
+test("Comments which start with the same text after the slashes", () => {
+    let input = `
+    // Something nothing
+    //
+    // Something other`;
+
+    let output = `
+    // Something nothing
+    //
+    // Something other`;
+    assertClipboardInputMatchesRunOutput(input, output);
+});
+
+test("Wraps to limit", () => {
+    let input = `
+    // This is a string which, in the
+    // ideal case, would wrap
+    //
+    // To 80 characters. The only issue is that this line is currently not 80 characters. Hopefully,
+    // when running this macro, the line will be shortened.`;
+
+    let output = `
+    // This is a string which, in the ideal case, would wrap
+    //
+    // To 80 characters. The only issue is that this line is currently not 80
+    // characters. Hopefully, when running this macro, the line will be
+    // shortened.`;
+    assertClipboardInputMatchesRunOutput(input, output);
+});
 
 // Something nothing
 //
