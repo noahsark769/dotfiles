@@ -8,6 +8,7 @@ For easy setup of new machines.
 cd ~/ # ~ installation necessary for keyboard maestro scripts
 git clone git@github.com:noahsark769/dotfiles.git
 cd dotfiles
+brew install z
 # Copy scripts into your path
 mkdir -p ~/bin
 cp git-fuzzy-co ~/bin/
