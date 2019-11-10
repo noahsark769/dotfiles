@@ -1,4 +1,3 @@
-
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 # MacPorts Installer addition on 2012-07-14_at_22:32:29: adding an appropriate PATH variable for use with MacPorts.
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
@@ -12,13 +11,20 @@ export PATH=/Users/noah/pear/bin:$PATH
 export PATH=/Users/noah/node_modules/less/bin:$PATH
 
 #addition for woff2otf, November 29th, 2012
-export PATH=/Users/noah/bin:$PATH
+export PATH=/Users/noahgilmore/bin:$PATH
+
+export PATH=~/Library/Python/2.7/bin:$PATH
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
 ### mysql from the commandline with mamp
 export PATH="/Applications/MAMP/Library/bin:$PATH"
+
+function github() {
+  result=${PWD##*/}
+  open "https://github.com/noahsark769/$result"
+}
 
 ### easy stuff for django
 alias manage="ipython manage.py"
@@ -34,6 +40,8 @@ function md() {
 }
 alias up="cd .."
 alias jj="clear"
+
+eval "$(aactivator init)"
 
 ### shortcuts for git
 alias editprof="vim ~/.bash_profile"
@@ -57,6 +65,8 @@ alias gprom="git pull --rebase origin master"
 alias gp="git pull"
 alias gls="git ls-files"
 alias server="python -m SimpleHTTPServer"
+alias grao="git remote add origin"
+alias gpomauh="git pull origin master --allow-unrelated-histories"
 
 function copysha {
   git log -n 1
@@ -84,4 +94,3 @@ alias v="vagrant" # got damn that word is hard to type
 alias mysql="mysql -u root -p"
 
 source ~/.bash_prompt
-source ~/git-completion.bash
