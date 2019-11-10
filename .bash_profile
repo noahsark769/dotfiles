@@ -7,9 +7,6 @@ export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 export PATH=/Users/noah/pear/bin:$PATH
 # the above addition was made while trying to install imagemagick for php.
 
-#addition for lessc, less css compiler,  on July 29th, 2012
-export PATH=/Users/noah/node_modules/less/bin:$PATH
-
 #addition for woff2otf, November 29th, 2012
 export PATH=/Users/noahgilmore/bin:$PATH
 
@@ -32,8 +29,6 @@ alias rs="python manage.py runserver"
 alias psh="ipython manage.py shell"
 
 ### easy navigaiton
-alias cdp="cd ~/Documents/programming"
-alias cdc="cd ~/Documents/classes"
 function md() {
   mkdir "$1"
   cd "$1"
