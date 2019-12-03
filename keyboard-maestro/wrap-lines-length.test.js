@@ -89,6 +89,13 @@ test("Wraps to limit", () => {
     assertClipboardInputMatchesRunOutput(input, output);
 });
 
-// Something nothing
-//
-// Something other
+test("Works without a newline first", () => {
+    globalVariables = { limit: 100 };
+    let input = `        // TODO (noah): Weird to have this here, we don't have a server-assigned id
+        // yet though...maybe there's a better way. Note that if we change this
+        // then we also have to change the sort in VariableConfigurator`;
+    let output = `        // TODO (noah): Weird to have this here, we don't have a server-assigned id yet
+        // though...maybe there's a better way. Note that if we change this then we also have to
+        // change the sort in VariableConfigurator`;
+    assertClipboardInputMatchesRunOutput(input, output);
+});
