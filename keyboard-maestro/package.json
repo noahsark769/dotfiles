@@ -214,7 +214,7 @@
     "json-stringify-safe": "^5.0.1",
     "json5": "^2.1.0",
     "jsprim": "^1.4.1",
-    "kind-of": "^3.2.2",
+    "kind-of": "^6.0.3",
     "lcid": "^2.0.0",
     "kleur": "^3.0.3",
     "left-pad": "^1.3.0",
