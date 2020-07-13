@@ -8,7 +8,7 @@ export PATH=/Users/noah/pear/bin:$PATH
 # the above addition was made while trying to install imagemagick for php.
 
 #addition for woff2otf, November 29th, 2012
-export PATH=/Users/noahgilmore/bin:$PATH
+export PATH=~/bin:$PATH
 
 export PATH=~/Library/Python/2.7/bin:$PATH
 
