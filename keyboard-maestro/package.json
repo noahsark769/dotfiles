@@ -222,7 +222,7 @@
     "levn": "^0.3.0",
     "load-json-file": "^4.0.0",
     "locate-path": "^3.0.0",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.19",
     "lodash.sortby": "^4.7.0",
     "make-dir": "^2.1.0",
     "makeerror": "^1.0.11",
