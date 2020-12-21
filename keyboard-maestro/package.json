@@ -249,7 +249,7 @@
     "neo-async": "^2.6.1",
     "node-int64": "^0.4.0",
     "nice-try": "^1.0.5",
-    "node-notifier": "^5.4.0",
+    "node-notifier": "^8.0.1",
     "node-modules-regexp": "^1.0.0",
     "node-pre-gyp": "^0.12.0",
     "nopt": "^4.0.1",
