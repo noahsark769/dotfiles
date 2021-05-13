@@ -406,7 +406,7 @@
     "write-file-atomic": "^2.4.1",
     "ws": "^5.2.2",
     "xml-name-validator": "^3.0.0",
-    "y18n": "^4.0.0",
+    "y18n": "^4.0.1",
     "uri-js": "^4.2.2",
     "yargs-parser": "^13.1.2",
     "yallist": "^3.0.3",
