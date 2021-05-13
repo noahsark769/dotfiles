@@ -139,7 +139,7 @@
     "has-unicode": "^2.0.1",
     "has-value": "^1.0.0",
     "has-values": "^1.0.0",
-    "hosted-git-info": "^2.7.1",
+    "hosted-git-info": "^2.8.9",
     "html-encoding-sniffer": "^1.0.2",
     "http-signature": "^1.2.0",
     "ignore-walk": "^3.0.1",
