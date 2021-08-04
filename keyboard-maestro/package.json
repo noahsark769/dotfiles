@@ -366,7 +366,7 @@
     "strip-eof": "^1.0.0",
     "supports-color": "^6.1.0",
     "symbol-tree": "^3.2.2",
-    "tar": "^4.4.8",
+    "tar": "^4.4.15",
     "test-exclude": "^5.2.3",
     "tmpl": "^1.0.4",
     "throat": "^4.1.0",
