@@ -404,7 +404,7 @@
     "wrap-ansi": "^2.1.0",
     "wrappy": "^1.0.2",
     "write-file-atomic": "^2.4.1",
-    "ws": "^5.2.2",
+    "ws": "^7.4.6",
     "xml-name-validator": "^3.0.0",
     "y18n": "^4.0.1",
     "uri-js": "^4.2.2",
