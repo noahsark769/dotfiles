@@ -12,7 +12,7 @@
     "acorn": "^5.7.3",
     "acorn-globals": "^4.3.2",
     "acorn-walk": "^6.1.1",
-    "ajv": "^6.10.0",
+    "ajv": "^6.12.3",
     "ansi-regex": "^4.1.0",
     "ansi-escapes": "^3.2.0",
     "ansi-styles": "^3.2.1",
