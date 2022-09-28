@@ -336,7 +336,7 @@
     "semver": "^5.7.0",
     "shebang-command": "^1.2.0",
     "set-blocking": "^2.0.0",
-    "set-value": "^2.0.0",
+    "set-value": "^4.0.1",
     "shebang-regex": "^1.0.0",
     "shellwords": "^0.1.1",
     "sisteransi": "^1.0.0",
