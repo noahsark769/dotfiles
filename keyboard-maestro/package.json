@@ -368,7 +368,7 @@
     "symbol-tree": "^3.2.2",
     "tar": "^4.4.15",
     "test-exclude": "^5.2.3",
-    "tmpl": "^1.0.4",
+    "tmpl": "^1.0.5",
     "throat": "^4.1.0",
     "to-fast-properties": "^2.0.0",
     "to-object-path": "^0.3.0",
