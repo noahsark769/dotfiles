@@ -70,7 +70,7 @@
     "convert-source-map": "^1.6.0",
     "copy-descriptor": "^0.1.1",
     "core-util-is": "^1.0.2",
-    "cross-spawn": "^6.0.5",
+    "cross-spawn": "^6.0.6",
     "cssom": "^0.3.6",
     "cssstyle": "^1.2.2",
     "dashdash": "^1.14.1",
