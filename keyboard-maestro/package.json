@@ -235,7 +235,7 @@
     "mime-db": "^1.40.0",
     "mime-types": "^2.1.24",
     "mimic-fn": "^2.1.0",
-    "minimatch": "^3.0.4",
+    "minimatch": "^3.0.5",
     "minimist": "^1.2.6",
     "minipass": "^2.3.5",
     "minizlib": "^1.2.1",
