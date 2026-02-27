@@ -1,0 +1,1 @@
+Run tsc, lint, knip, and fix any issues

@@ -19,4 +19,6 @@ cp .slate ~/.slate
 # Install pathogen from the instructions at https://github.com/tpope/vim-pathogen
 mkdir -p ~/.vim/colors
 cp Monokai.vim ~/.vim/colors/
+# Claude Code custom slash commands
+cp -r claude-commands/ ~/.claude/commands/
 ```
