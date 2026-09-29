@@ -1,0 +1,5 @@
+prefix_rule(
+    pattern=["gh", "pr", "merge"],
+    decision="prompt",
+    justification="Ask Noah before merging any PR.",
+)

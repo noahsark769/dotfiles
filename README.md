@@ -21,4 +21,7 @@ mkdir -p ~/.vim/colors
 cp Monokai.vim ~/.vim/colors/
 # Claude Code custom slash commands
 cp -r claude-commands/ ~/.claude/commands/
+# Codex command approval for PR merges (requires interactive approvals)
+mkdir -p ~/.codex/rules
+cp codex/rules/require-pr-merge-approval.rules ~/.codex/rules/
 ```
